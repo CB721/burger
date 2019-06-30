@@ -19,7 +19,7 @@ router.get("/", function(req, res) {
 });
 
 router.post("/api/burgers", function(req, res) {
-  burger.create(req.body.name, function(result) {
+  burger.create(req.body.burger_name, function(result) {
     // redirect to main page
     res.redirect("/");
   });

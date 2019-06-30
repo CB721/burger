@@ -6,7 +6,7 @@
 
 <div class="container">
   <div class="row">
-    <h2>Burger List</h2>
+    <h2>Menu</h2>
     <ul class="burger_list">
       {{#each burgers}}
       {{#unless this.devoured}}
@@ -39,10 +39,10 @@
 
 <div class="container">
   <div class="row">
-    <form class="create-form">
+    <form action="/api/burgers" method="POST">
       <div class="form-group">
         <label for="ca">Burger Name:</label>
-        <input type="text" id="burg" name="name">
+        <input type="text" name="burger_name">
         <button type="submit">Add to menu</button>
       </div>
     </form>
