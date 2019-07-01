@@ -15,3 +15,11 @@ $(".devour").on("submit", function(event) {
       }
     );
   });
+
+  function validateForm () {
+      var x = document.forms["add-a-burger"]["burger_name"].value;
+      if (x == "") {
+          alert("You must put in a burger name");
+          return false;
+      }
+  }
