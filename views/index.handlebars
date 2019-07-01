@@ -1,52 +1,66 @@
 <div class="container">
   <div class="row">
-    <h1>Eat-Da-Burger</h1>
+    <div class="col-sm-12">
+      <h1 class="text-center">Eat-Da-Burger</h1>
+    </div>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <h2>Menu</h2>
-    <ul class="burger_list">
-      {{#each burgers}}
-      {{#unless this.devoured}}
-      <li>{{this.burger_name}}</li>
-      <form class="devour" data-attr="{{this.id}}">
-        <button type="submit">Devour It!</button>
+    <div class="col-sm-12 text-left">
+      <h2>Menu</h2>
+      <ul class="burger_list">
+        {{#each burgers}}
+        {{#unless this.devoured}}
+        {{this.burger_name}}
+        <form class="devour" data-attr="{{this.id}}">
+          <button type="submit">Devour It!</button>
+        </form>
+        <br>
+        {{/unless}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-right">
+      <h2>Eaten Burgers</h2>
+      <ul class="burger-list">
+        {{#each burgers}}
+        {{#if this.devoured}}
+        <form>
+          <button type="button" disabled>{{this.burger_name}}</button>
+        </form>
+        <br>
+        {{/if}}
+        {{/each}}
+      </ul>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h2 class="text-center">Add a Burger</h2>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-sm-12 text-center">
+      <form action="/api/burgers" method="POST">
+        <div class="form-group">
+          <label for="ca">Burger Name:</label>
+          <input type="text" name="burger_name">
+          <button type="submit">Add to menu</button>
+        </div>
       </form>
-      {{/unless}}
-      {{/each}}
-    </ul>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <h2>Eaten Burgers</h2>
-    <ul>
-      {{#each burgers}}
-      {{#if this.devoured}}
-      <li>{{this.burger_name}}</li>
-      {{/if}}
-      {{/each}}
-    </ul>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <h2>Add a Burger</h2>
-  </div>
-</div>
-
-<div class="container">
-  <div class="row">
-    <form action="/api/burgers" method="POST">
-      <div class="form-group">
-        <label for="ca">Burger Name:</label>
-        <input type="text" name="burger_name">
-        <button type="submit">Add to menu</button>
-      </div>
-    </form>
+    </div>
   </div>
 </div>
