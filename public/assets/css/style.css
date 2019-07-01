@@ -1,6 +1,8 @@
 body {
     font-family: 'Barriecito', cursive;
     font-size: 24px;
+    background-image: url(https://media.giphy.com/media/WBTUlyKBVlTTa/giphy.gif);
+    background-repeat: round;
     background-color: #333333;
     color: #E79736;
 }
@@ -9,8 +11,6 @@ input[type=text], button {
     border-radius: 10px;
     height: 40px;
     background-color: #669F2D;
-}
-button {
     color: #EBC46D;
 }
 #devoured {
@@ -38,7 +38,7 @@ h2 {
     }
     body {
         background-image: url(https://media.giphy.com/media/WBTUlyKBVlTTa/giphy.gif);
-        background-repeat: space;
+        background-repeat: round;
     }
     #eaten {
         font-size: 24px;

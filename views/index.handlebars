@@ -1,3 +1,4 @@
+{{!-- Header --}}
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
@@ -6,9 +7,10 @@
   </div>
 </div>
 
+{{!-- List of currently available burgers --}}
 <div class="container">
   <div class="row">
-    <div class="col-sm-4" id="menu">
+    <div class="col-sm-6" id="menu">
       <h2>Menu</h2>
         {{#each burgers}}
         {{#unless this.devoured}}
@@ -20,10 +22,9 @@
         {{/unless}}
         {{/each}}
     </div>
-    <div class="col-sm-4" >
-      <img id="burger-gif" src="https://media.giphy.com/media/WBTUlyKBVlTTa/giphy.gif" alt="burger">
-    </div>
-    <div class="col-sm-4" id="devoured">
+    
+    {{!-- List of unavailable burgers --}}
+    <div class="col-sm-6" id="devoured">
       <h2>Eaten Burgers</h2>
         {{#each burgers}}
         {{#if this.devoured}}
@@ -37,6 +38,7 @@
   </div>
 </div>
 
+{{!-- Add a burger to available burgers list --}}
 <div class="container">
   <div class="row">
     <div class="col-sm-12">
@@ -44,10 +46,10 @@
     </div>
   </div>
 </div>
-
 <div class="container">
   <div class="row">
     <div class="col-sm-12 text-center" id="add-a-burger">
+      {{!-- Post to burgers api on submit --}}
       <form action="/api/burgers" method="POST">
         <div class="form-group">
           <label for="ca">Burger Name:</label>
