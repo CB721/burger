@@ -8,9 +8,8 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-12 text-left">
+    <div class="col-sm-4 text-left" id="menu">
       <h2>Menu</h2>
-      <ul class="burger_list">
         {{#each burgers}}
         {{#unless this.devoured}}
         {{this.burger_name}}
@@ -20,25 +19,28 @@
         <br>
         {{/unless}}
         {{/each}}
-      </ul>
+    </div>
+    <div class="col-sm-4">
+
+    </div>
+    <div class="col-sm-4 text-right" id="devoured">
+      <h2>Eaten Burgers</h2>
+        {{#each burgers}}
+        {{#if this.devoured}}
+        <form>
+          <button class="hvr-ripple-out" type="button" disabled>{{this.burger_name}}</button>
+        </form>
+        <br>
+        {{/if}}
+        {{/each}}
     </div>
   </div>
 </div>
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-12 text-right">
-      <h2>Eaten Burgers</h2>
-      <ul class="burger-list">
-        {{#each burgers}}
-        {{#if this.devoured}}
-        <form>
-          <button type="button" disabled>{{this.burger_name}}</button>
-        </form>
-        <br>
-        {{/if}}
-        {{/each}}
-      </ul>
+    <div class="col-sm-12 text-right" id="devoured">
+      
     </div>
   </div>
 </div>
