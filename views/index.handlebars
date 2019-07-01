@@ -14,7 +14,7 @@
         {{#unless this.devoured}}
         {{this.burger_name}}
         <form class="devour" data-attr="{{this.id}}">
-          <button type="submit">Devour It!</button>
+          <button class="devour-it" type="submit">Devour It!</button>
         </form>
         <br>
         {{/unless}}
@@ -37,13 +37,26 @@
   </div>
 </div>
 
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 text-right" id="devoured">
-      
-    </div>
-  </div>
-</div>
+<!-- section for results modal -->
+        <div id="matchResults" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
+            aria-labelledby="myLargeModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <img id="burger-modal" alt="burger">
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button id="resetSurvey" type="button" class="btn btn-primary">Find a new match!</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 <div class="container">
   <div class="row">
