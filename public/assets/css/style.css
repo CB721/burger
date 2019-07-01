@@ -1,14 +1,24 @@
 body {
     font-family: 'Barriecito', cursive;
     font-size: 24px;
-    background-color: #13BFD8;
-    color: #143E43;
+    background-color: #333333;
+    color: #E79736;
 }
 input[type=text], button {
-    border: 2px solid #143E43;
+    border: 4px solid #990000;
     border-radius: 10px;
     height: 40px;
+    background-color: #669F2D;
 }
 #devoured {
     float: right;
+}
+h2 {
+    color: #663300;
+}
+#burger-gif {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
 }
