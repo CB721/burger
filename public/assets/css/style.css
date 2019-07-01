@@ -10,8 +10,15 @@ input[type=text], button {
     height: 40px;
     background-color: #669F2D;
 }
+button {
+    color: #EBC46D;
+}
 #devoured {
     float: right;
+    text-align: right;
+}
+h1 {
+   color: #FFFF00; 
 }
 h2 {
     color: #663300;
@@ -22,6 +29,23 @@ h2 {
     margin-right: auto;
     width: 100%;
 }
-.devour-it {
-    
+@media screen and (max-width: 640px) {
+    #menu, #devoured, #add-a-burger {
+        text-align: center;
+    }
+    #burger-gif {
+        display: none;
+    }
+    body {
+        background-image: url(https://media.giphy.com/media/WBTUlyKBVlTTa/giphy.gif);
+        background-repeat: space;
+    }
+    #eaten {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 768px) {
+    #eaten {
+        font-size: 16px;
+    }
 }

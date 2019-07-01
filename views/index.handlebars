@@ -8,13 +8,13 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-4 text-left" id="menu">
+    <div class="col-sm-4" id="menu">
       <h2>Menu</h2>
         {{#each burgers}}
         {{#unless this.devoured}}
         {{this.burger_name}}
         <form class="devour" data-attr="{{this.id}}">
-          <button class="devour-it" type="submit">Devour It!</button>
+          <button type="submit">Devour It!</button>
         </form>
         <br>
         {{/unless}}
@@ -23,12 +23,12 @@
     <div class="col-sm-4" >
       <img id="burger-gif" src="https://media.giphy.com/media/WBTUlyKBVlTTa/giphy.gif" alt="burger">
     </div>
-    <div class="col-sm-4 text-right" id="devoured">
+    <div class="col-sm-4" id="devoured">
       <h2>Eaten Burgers</h2>
         {{#each burgers}}
         {{#if this.devoured}}
         <form>
-          <button class="hvr-ripple-out" type="button" disabled>{{this.burger_name}}</button>
+          <button id="eaten" type="button" disabled>{{this.burger_name}}</button>
         </form>
         <br>
         {{/if}}
@@ -36,27 +36,6 @@
     </div>
   </div>
 </div>
-
-<!-- section for results modal -->
-        <div id="matchResults" class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog"
-            aria-labelledby="myLargeModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-lg">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                        </button>
-                    </div>
-                    <div class="modal-body">
-                        <img id="burger-modal" alt="burger">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button id="resetSurvey" type="button" class="btn btn-primary">Find a new match!</button>
-                    </div>
-                </div>
-            </div>
-        </div>
 
 <div class="container">
   <div class="row">
@@ -68,7 +47,7 @@
 
 <div class="container">
   <div class="row">
-    <div class="col-sm-12 text-center">
+    <div class="col-sm-12 text-center" id="add-a-burger">
       <form action="/api/burgers" method="POST">
         <div class="form-group">
           <label for="ca">Burger Name:</label>
