@@ -20,7 +20,7 @@ input[type=text], button {
 h1 {
    color: #FFFF00; 
 }
-h2 {
+h2, #repo {
     color: #663300;
 }
 #burger-gif {
