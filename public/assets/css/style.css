@@ -17,6 +17,10 @@ input[type=text], button {
     float: right;
     text-align: right;
 }
+.main-page {
+    background-color: rgba(0,0,0,.5);
+    border-radius: 5px;
+}
 h1 {
    color: #FFFF00; 
 }

@@ -7,11 +7,12 @@
   </div>
 </div>
 
-{{!-- List of currently available burgers --}}
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6" id="menu">
-      <h2>Menu</h2>
+<div class="container main-page">
+  {{!-- List of currently available burgers --}}
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6" id="menu">
+        <h2>Menu</h2>
         {{#each burgers}}
         {{#unless this.devoured}}
         {{this.burger_name}}
@@ -21,11 +22,11 @@
         <br>
         {{/unless}}
         {{/each}}
-    </div>
-    
-    {{!-- List of unavailable burgers --}}
-    <div class="col-sm-6" id="devoured">
-      <h2>Eaten Burgers</h2>
+      </div>
+
+      {{!-- List of unavailable burgers --}}
+      <div class="col-sm-6" id="devoured">
+        <h2>Eaten Burgers</h2>
         {{#each burgers}}
         {{#if this.devoured}}
         <form>
@@ -34,29 +35,30 @@
         <br>
         {{/if}}
         {{/each}}
+      </div>
     </div>
   </div>
-</div>
 
-{{!-- Add a burger to available burgers list --}}
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <h2 class="text-center">Add a Burger</h2>
+  {{!-- Add a burger to available burgers list --}}
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="text-center">Add a Burger</h2>
+      </div>
     </div>
   </div>
-</div>
-<div class="container">
-  <div class="row">
-    <div class="col-sm-12 text-center" id="add-a-burger">
-      {{!-- Post to burgers api on submit --}}
-      <form name="add-a-burger" action="/api/burgers" onsubmit="return validateForm()" method="POST">
-        <div class="form-group">
-          <label for="ca">Burger Name:</label>
-          <input type="text" name="burger_name">
-          <button type="submit">Add to menu</button>
-        </div>
-      </form>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center" id="add-a-burger">
+        {{!-- Post to burgers api on submit --}}
+        <form name="add-a-burger" action="/api/burgers" onsubmit="return validateForm()" method="POST">
+          <div class="form-group">
+            <label for="ca">Burger Name:</label>
+            <input type="text" name="burger_name">
+            <button type="submit">Add to menu</button>
+          </div>
+        </form>
+      </div>
     </div>
   </div>
 </div>
