@@ -4,10 +4,12 @@ The customer also has the option of requesting a special burger.  They simply ty
 
 All of the burgers are stored in the database.  They are assigned a boolean "Devoured" value when they are entered by the user.  If the "Devoured" value is true, the burger is placed in the "Eaten Burgers" section.  If true, it is placed in the "Menu" section.
 
+[View Project](https://sleepy-ravine-56628.herokuapp.com)
+
 Technologies used:
-HTML/CSS
-Handlebars
-SQL
-Express
-Node
-JavaScript
+* HTML/CSS
+* Handlebars
+* SQL
+* Express
+* Node
+* JavaScript
